@@ -116,10 +116,13 @@ class OAuth
      * @param  array  $scope
      * @return \OAuth\Common\Service\AbstractService
      */
-    public function consumer( $service, $url = null, $scope = null )
+    public function consumer( $service, $name = null, $url = null, $scope = null )
     {
-        // get config
-        $this->setConfig( $service );
+        if($name == null){
+            $this->setConfig( $service );
+        }else{
+            $this->setConfig( $name );
+        }
 
         // get storage object
         $storage = $this->createStorageInstance( $this->_storage_name );
