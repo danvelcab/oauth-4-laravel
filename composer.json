@@ -25,5 +25,5 @@
             "Artdarek\\OAuth": "src/"
         }
     },    
-    "minimum-stability": "dev-custom"
+    "minimum-stability": "dev-master"
 }
